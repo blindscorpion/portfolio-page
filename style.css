@@ -1,0 +1,305 @@
+/* General text and font styling */
+
+* {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, serif;
+}
+
+h1, h2, h3 {
+    letter-spacing: .35rem;
+    text-transform: uppercase;
+    color: #fad3b3;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    letter-spacing: .15rem;
+    color: #161B21;
+    margin: .5em;
+    font-size: 1rem;
+}
+
+p {
+    font-weight: 100;
+}
+
+.card p {
+    font-size: 0.75rem;
+}
+
+a {
+    font-size: 1rem;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.intro-text {
+    width: 50%;
+    color: #D3D2CD;
+}
+
+.about-me-text {
+    color: #D3D2CD;
+    width: 50%;
+}
+
+/* General layout styling */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    background: #E1EEF7;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #161B21;
+    color: #D3D2CD;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    height: 7rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.2rem;
+    height: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #D3D2CD;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -.82rem;
+    width: 100%;
+    height: 7rem;
+    background: hsla(0, 0%, 100%, 0.118);
+    z-index: -1;
+    transform: scaleY(0.0);
+    transform-origin: bottom;
+    transition: transform 250ms;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    background: hsla(0, 0%, 100%, 0.118);
+    z-index: -1;
+    transform: scaleY(0.0);
+    transform-origin: bottom;
+    transition: transform 250ms;
+}
+
+a:hover::after {
+    transform: scaleY(1.0);
+    transform-origin: top;
+}
+
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.intro-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 15%;
+    border-top-left-radius: 100vw;
+    border-bottom-left-radius: 5vw;
+    height: 25rem;
+    width: 100vw;
+    background: #161B21;
+    margin: 30px 0;
+    box-shadow: 0 0 30px #4b5a6c;
+}
+
+.about-me-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -15%;
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 5vw;
+    height: 25rem;
+    width: 100vw;
+    background: #161B21;
+    margin: 30px 0;
+    box-shadow: 0 0 30px #4b5a6c;
+}
+
+.about-me-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.card {
+    width: 200px;
+    outline: #161B21 solid 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #f6efe6;
+    box-shadow: 0 0 30px #4b5a6c;
+    border-radius: 10px;
+}
+
+ol {
+    padding: 0 0 0 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer {
+    background: #161B21;
+    height: 7rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.email {
+    height: 31px;
+    width: 31px;
+    object-fit: scale-down;
+    background: #fff;
+    border-radius: 50%;
+    outline: #fff solid 2px;
+}
+
+video {
+    object-fit: cover;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+}
+
+.card-img {
+    height: 100%;
+    aspect-ratio: 1 /1;
+    object-fit: cover;
+    overflow: hidden;
+    width: 200px;
+}
+
+.card p {
+    color: #161B21;
+    margin: 5px;
+    margin-top: 0;
+}
+
+/* Grow effect styling */
+
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+.grow:hover { 
+    transform: scale(1.1); 
+    }
+
+/* Media queries */
+
+@media only screen and (max-width: 1200px) {
+    .about-me-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about-me-cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+/* Extra extra small devices (phones, 450px and down) */
+@media only screen and (max-width: 450px) {
+    * {
+        font-size: 7px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 450px) {
+    * {
+        font-size: 9px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    * {
+        font-size: 12px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    * {
+        font-size: 18px;
+    }
+}

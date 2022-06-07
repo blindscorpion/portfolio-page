@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aren's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header with title and navbar -->
+    <header>
+        <h1>Aren's Portfolio</h1>
+        <nav class="nav-container">
+            <a href="#intro">Intro</a>
+            <a href="#about-me">About Me</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <img class="hero-img" src="./images/ometepe.jpg" alt="The island of Ometepe in Nicaragua">
+        <!-- Introduction text and container -->
+        <div id="intro" class="section">
+            <div class="intro-design">
+                <article class="intro-text">
+                    <h2>Hello, I'm Aren!</h2>
+                    <hr>
+                    <p>I'm an aspiring web developer living in the research triangle in North Carolina.</p>
+                    <p>I've worked in a variety of fields in my career from teaching, to business management, and I even started a shiitake mushroom farm. Technology has always been a common thread in my work and I've begun learning software engineering to explore that more deeply.</p>
+                </article>
+            </div>
+        </div>
+        <!-- About Me text and container -->
+        <div id="about-me" class="section">
+            <div class="about-me-design">
+                <article class="about-me-text">
+                    <h2>About Me</h2>
+                    <hr>
+                    <p>What draws me to web development above all is automation. I love automating tasks and data flows. I also enjoy learning by working with others. Feel free to reach out if you have any interesting projects you'd like a hand with.</p>
+                    <p>If you'd like to know more about me outside of web development, check out the cards below!</p>
+                </article>
+            </div>
+        </div>
+        <!-- Cards describing personal interests -->
+        <ol class="about-me-cards">
+            <li class="card grow">
+                <img class="card-img" src="./images/me-on-boat.jpg" alt="I'm on a boat">
+                <h3>Sailing</h3>
+                <p>I enjoy trying new things, traveling and stepping out of my comfort zone. Here's me doing a little sailing which I'm not very good at.</p>
+            </li>
+            <li class="card grow">
+                <img class="card-img" src="./images/food.jpeg" alt="Plantain Burger">
+                <h3>Burger?</h3>
+                <p>I enjoy trying delicious and interesting food. This is a plaintain burger I found in Granada, Nicarauga.</p>
+            </li>
+            <li class="card grow">
+                <img class="card-img" src="./images/soup.jpg" alt="I like soup">
+                <h3>Souped Up</h3>
+                <p>I also enjoy bad food! Have you ever tried instant soup with chicharrones and chili sauce? You really should.</p>
+            </li>
+            <li class="card grow" onmouseover="firstElementChild.play()" onmouseleave="firstElementChild.pause()">
+                <video loop>
+                    <source src="./images/drone-lake.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Droning on</h3>
+                <p>I have a license for operating drones commercially. I enjoy making timelapses such as this one over Jordan Lake, NC. Hover to view!</p>
+            </li>
+        </ol>
+    </main>
+    <!-- Footer with contact info -->
+    <footer>
+        <nav class="contact" id="contact">
+            <a class="grow" href="https://www.linkedin.com/in/arenblake/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedin.png" alt="linkedin logo"></a>
+            <a class="grow" href="https://github.com/arenblake" target="_blank" rel="noopener noreferrer"><img src="./images/github-light.png" alt="github logo"></a>
+            <a class="grow" href="mailto:freeflowbooking@gmail.com"><img class="email" src="./images/email.png" alt="email logo"></a>
+        </nav>
+    </footer>
+</body>
+</html>
