@@ -42,13 +42,38 @@ a {
 }
 
 .intro-text {
-    width: 50%;
+    width: 60%;
     color: #D3D2CD;
+}
+
+.intro-text-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.intro-text-inner h3 {
+    color: #D3D2CD;
+    margin: 1em;
+}
+
+.lang-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+ul {
+    margin-top: 0;
+}
+
+ul li {
+    text-align: left;
 }
 
 .about-me-text {
     color: #D3D2CD;
-    width: 50%;
+    width: 60%;
 }
 
 /* General layout styling */
@@ -191,7 +216,7 @@ ol {
     padding: 0 0 0 0;
 }
 
-li {
+ol li {
     list-style-type: none;
 }
 
